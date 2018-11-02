@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Browser title and links to CSS file -->
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" type="text/css" href="Temp.css">
+</head>
+
+<body>
+    <center><strong><h1>Temperature Converter</h1></strong></center>
+    <center><strong><h2>Determine temperature in °Fahrenheit or °Celsius via this quick converter.
+    Choose a button of your choice to begin this fiery yet chilling experience.</h2></center></strong>
+    <div class="row">
+        <div class="column">
+            <a href="https://www.coolpun.com/topic/classic%20book%20title"><img class="pic1" src="hot.jpg"></a>
+        </div>
+
+        <div class="column">
+            <a href="https://www.dreamstime.com/stock-illustration-two-thermometers-sun-snowflake-high-low-temperature-smile-vector-image-image57678860"><img class="pic1" src="weather3.jpg"></a>
+        </div>
+
+        <div class="column">
+            <a href="https://www.reddit.com/r/funny/comments/4j8nq2/fahrenheit_celsius_and_kelvin/"><img class="pic1" src="weather2.jpg"></a>
+        </div>
+
+    </div>
+
+    <div>
+        <center><u><h3>Fahrenheit to Celsius:</h3></u>
+        <strong><label id="write">°Fahrenheit<label></strong>
+        <input id="inputFahrenheit" type="number" placeholder="°Fahrenheit" oninput="faCe(this.value)" onchange="faCe(this.value)">
+        <strong><p id="write">°Celsius: <span id="outputCelsius"></span></p></strong></center>
+    </div>
+
+    <div>
+        <center><u><h3>Celsius to Fahrenheit:</h3></u>
+        <strong><label id="write">°Celsius</label></strong>
+        <input id="inputCelsius" type="number" placeholder="°Celsius" oninput="ceFa(this.value)" onchange="ceFa(this.value)">
+        <strong><p id="write">°Fahrenheit: <span id="outputFahrenheit"></span></p></strong></center>
+    </div>
+
+<script>
+    function faCe(fDegree) {
+        fDegree = parseFloat(fDegree);
+        var x = (fDegree*1.8)+32;
+            if (fDegree < (-459.67)) {
+                x = "Below Absolute Zero";
+            }
+        document.getElementById("outputCelsius").innerHTML=(x);
+    }
+    faCe(fDegree);
+
+    function ceFa(cDegree) {
+        cDegree = parseFloat(cDegree);
+        var x = (valNun-32)/1.8;
+            if (cDegree < (-273.15)) {
+ 	              x = "Below Absolute Zero";
+            }
+        document.getElementById("outputFahrenheit").innerHTML=(x);
+    }
+    ceFa(cDegree);
+</script>
+
+    <center><u><h3>Formulas:<h3></u></center>
+    <a href="https://www.mathsisfun.com/temperature-conversion.html"><center><img class="pic2" src="formula.jpg"></center></a>
+    <center><u><h4>Boiling and Freezing Points:<h4></u></center>
+    <a href="https://www.mathsisfun.com/temperature-conversion.html"><center><img class="pic3" src="boil.jpg"></center></a>
+
+    <footer>
+      <!-- External links used -->
+      <!-- Temperature Coding inspiration -->
+      <p><strong>Creating Converters: <a href = https://www.w3schools.com/howto/howto_js_temperature_converter.asp>Converters</a></strong></p>
+      <!-- Formulas -->
+      <p><strong>Formulas: <a href = https://www.mathsisfun.com/temperature-conversion.html>Formulas</a></strong></p>
+      <br>
+    </footer>
+</body>
+</html>

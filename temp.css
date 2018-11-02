@@ -1,0 +1,75 @@
+/* Incorporates padding and border properties in the website's overall width and height */
+* {box-sizing: border-box}
+
+/* Displays style of website in terms of size, font, and background image */
+body, html {
+    height: 100%;
+    padding: 10px;
+    margin: 0;
+    font-family: Arial;
+    background-image: url("weather.jpg");
+}
+
+.column {
+    float: left;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.pic1{
+  width: 425px;
+  height: 300px;
+  border:7px solid #993333;
+}
+
+.pic2{
+  width: 600px;
+  border:7px solid #993333;
+}
+
+.pic3{
+  width: 800px;
+  height: 500px;
+  border:7px solid #993333;
+}
+
+h1 {
+  color: #004d4d;
+  background-color: #ffcccc;
+  font-size: 70px;
+  border-bottom: 7px solid #009999;
+}
+
+/* Determines font color, font size, and border of h2 text */
+h2 {
+  color: #001a1a;
+  background-color: #ff8080;
+  font-size: 30px;
+}
+
+h3 {
+  color: #742525;
+  font-size: 50px;
+}
+
+h4 {
+  color: #742525;
+  font-size: 30px;
+}
+
+#write {
+    font-size: 30px;
+}
+
+#inputCelsius {
+    font-size: 30px;
+}
+
+#inputFahrenheit {
+    font-size: 30px;
+}
